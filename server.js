@@ -15,6 +15,7 @@ const embeddedRoute = require("./routes/stripe/embedded");
 const allowedOrigins = [
   "https://testreact.marutisurakshaa.com",
   "http://localhost:3000",
+  "https://nextgenautosparts.com", // Added your frontend domain
 ];
 
 // Middleware

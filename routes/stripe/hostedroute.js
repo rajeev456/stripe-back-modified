@@ -33,8 +33,8 @@ router.post("/create-checkout-session", async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "https://nodetest.marutisurakshaa.com/hosted/success",
-      cancel_url: "https://nodetest.marutisurakshaa.com/hosted/cancel",
+      success_url: "https://nextgenautosparts.com/success",
+      cancel_url: "https://nextgenautosparts.com/cancel",
     });
     res.status(200);
     res.json({ sessionUrl: session?.url });
@@ -47,7 +47,7 @@ router.post("/create-checkout-session", async (req, res) => {
 
 router.get("/success", async (req, res) => {
   try {
-    return res.redirect("https://testreact.marutisurakshaa.com/success");
+    return res.redirect("https://nextgenautosparts.com/success");
   } catch (error) {
     console.error("error in success", error);
     return res.status(500).json({ message: "internal server error" });
@@ -56,7 +56,7 @@ router.get("/success", async (req, res) => {
 
 router.get("/cancel", async (req, res) => {
   try {
-    return res.redirect("https://testreact.marutisurakshaa.com/failure");
+    return res.redirect("https://nextgenautosparts.com/failure");
   } catch (error) {
     console.error("error in cancel", error);
     return res.status(500).json({ message: "internal server error" });
